@@ -1,0 +1,23 @@
+{% extends "auctions/listing.html" %}
+{% block body%}
+
+{% if is_winner %}
+    <h5>Congratulations! You won the auction!</h5>
+{% else %}
+    <h5>Bidding is closed</h5>
+{% endif %}
+
+<table style="width:100%">
+    <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Winner</th>
+    </tr>
+    <tr>
+        <td>{{ listing.title }}</td>
+        <td>{{ listing.price }}</td>
+        <td>{{ listing.winner }}</td>
+    </tr>
+
+{% endblock %}
+```
